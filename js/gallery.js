@@ -91,3 +91,14 @@ const markup = createGalleryMarkup(images);
 galleryElements.insertAdjacentHTML('beforeend', markup);
 
 console.log(document.querySelectorAll('.gallery-item').length);
+
+galleryElements.addEventListener("click", clickOnGallery)
+
+function clickOnGallery(event) {
+    event.preventDefault();
+
+    const isImage = event.target.classList.contains("gallery-image");
+    if(!isImage) {
+        return;
+    }
+}
