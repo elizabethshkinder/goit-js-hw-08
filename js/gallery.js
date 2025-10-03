@@ -90,8 +90,6 @@ return `<li class="gallery-item">
 const markup = createGalleryMarkup(images);
 galleryElements.insertAdjacentHTML('beforeend', markup);
 
-console.log(document.querySelectorAll('.gallery-item').length);
-
 galleryElements.addEventListener("click", clickOnGallery)
 
 function clickOnGallery(event) {
@@ -101,4 +99,7 @@ function clickOnGallery(event) {
     if(!isImage) {
         return;
     }
+
 }
+
+  
