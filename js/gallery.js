@@ -84,7 +84,6 @@ return `<li class="gallery-item">
 })
 
 .join('');
-
 }
     
 const markup = createGalleryMarkup(images);
@@ -100,6 +99,8 @@ function clickOnGallery(event) {
         return;
     }
 
-}
+    const largeImgLink = event.target.dataset.source;
 
-  
+    const modal = basicLightbox.create(`<img src="${largeImgLink}" alt="${event.target.alt}"/>`);
+    modal.show();
+}
